@@ -1,0 +1,68 @@
+[gd_scene load_steps=7 format=3 uid="uid://dj0k6wi6lx1k0"]
+
+[ext_resource type="Texture2D" uid="uid://c547h7ov20mx8" path="res://textures/panel_blue.png" id="1_1hq8f"]
+[ext_resource type="Script" path="res://ui/custom_nodes/crafting_button.gd" id="2_e05u8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aknlh"]
+bg_color = Color(0.423529, 0.423529, 0.423529, 0.643137)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5qqfj"]
+bg_color = Color(0.513688, 0.513688, 0.513688, 0.101961)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o6d5s"]
+bg_color = Color(0.534557, 0.534557, 0.534557, 0.290196)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wvmqo"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="CraftingButton" type="TextureRect"]
+custom_minimum_size = Vector2(64, 64)
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_1hq8f")
+script = ExtResource("2_e05u8")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="IconTextureRect" type="TextureRect" parent="MarginContainer"]
+layout_mode = 2
+expand_mode = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+theme_override_styles/disabled = SubResource("StyleBoxFlat_aknlh")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5qqfj")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_o6d5s")
+theme_override_styles/normal = SubResource("StyleBoxFlat_wvmqo")

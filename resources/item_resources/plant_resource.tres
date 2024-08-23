@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="ItemResource" load_steps=3 format=3 uid="uid://tc826ne5574o"]
+[gd_resource type="Resource" script_class="ItemResource" load_steps=3 format=3 uid="uid://x4yyyg0mt5gy"]
 
 [ext_resource type="Script" path="res://resources/item_resources/item_resource.gd" id="1_1vfen"]
 [ext_resource type="Texture2D" uid="uid://bfohbuxcticty" path="res://textures/item_icons/plant.png" id="1_3s0h8"]
@@ -8,3 +8,4 @@ script = ExtResource("1_1vfen")
 item_key = 2
 display_name = "Plant"
 icon = ExtResource("1_3s0h8")
+description = "A green plant."
