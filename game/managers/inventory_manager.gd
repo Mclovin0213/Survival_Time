@@ -1,8 +1,11 @@
 extends Node
 
 const INVENTORY_SIZE = 28
+const HOTBAR_SIZE = 9
 
 var inventory : Array = []
+var hotbar : Array = []
+
 
 func _enter_tree() -> void:
 	EventSystem.INV_try_to_pickup_item.connect(try_to_pickup_item)
@@ -13,9 +16,16 @@ func _enter_tree() -> void:
 	
 func _ready() -> void:
 	inventory.resize(INVENTORY_SIZE)
+	hotbar.resize(HOTBAR_SIZE)
+	
+	# TODO: Delete later
+	inventory[0] = ItemConfig.Keys.Axe
 
 func send_inventory() -> void:
 	EventSystem.INV_inventory_updated.emit(inventory)
+
+func send_hotbar() -> void:
+	EventSystem.INV_hotbar_updated.emit(hotbar)
 
 func try_to_pickup_item(item_key : ItemConfig.Keys, destroy_pickup : Callable) -> void:
 	if not get_free_slots():
@@ -35,11 +45,22 @@ func add_item(item_key : ItemConfig.Keys) -> void:
 	
 	send_inventory()
 
-func switch_item_indexes(idx1 : int, idx2 : int) -> void:
-	var item_key1 = inventory[idx1]
-	inventory[idx1] = inventory[idx2]
-	inventory[idx2] = item_key1
+func switch_item_indexes(idx1 : int, idx1_is_hotbar : bool, idx2 : int, idx2_is_hotbar : bool) -> void:
+	var item1 = inventory[idx1] if not idx1_is_hotbar else hotbar[idx1]
+	var item2 = inventory[idx2] if not idx2_is_hotbar else hotbar[idx2]
+	
+	if not idx1_is_hotbar:
+		inventory[idx1] = item2
+	else:
+		hotbar[idx1] = item2
+	
+	if not idx2_is_hotbar:
+		inventory[idx2] = item1
+	else:
+		hotbar[idx2] = item1
+	
 	send_inventory()
+	send_hotbar()
 
 func delete_crafting_costs(costs : Array[BlueprintCostData]) -> void:
 	for cost in costs:
