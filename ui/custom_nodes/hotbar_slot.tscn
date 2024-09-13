@@ -9,7 +9,7 @@
 texture = ExtResource("2_hr4c1")
 script = ExtResource("3_rnbjo")
 
-[node name="NumTextureRect" type="TextureRect" parent="." index="1"]
+[node name="NumTextureRect" type="TextureRect" parent="." index="1" groups=["HotbarSlots"]]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 0
 offset_left = -16.0

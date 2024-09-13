@@ -55,3 +55,10 @@ const CRAFTING_BLUEPRINT_RESOURCE_PATHS := {
 
 static func get_crafting_blueprint(key : Keys) -> CraftingBlueprintResource:
 	return load(CRAFTING_BLUEPRINT_RESOURCE_PATHS.get(key))
+
+const EQUIPPABLE_ITEM_PATHS := {
+	Keys.Axe : "res://items/equippables/equippable_axe.tscn",
+}
+
+static func get_equippable_item(key : Keys) -> PackedScene:
+	return load(EQUIPPABLE_ITEM_PATHS.get(key))

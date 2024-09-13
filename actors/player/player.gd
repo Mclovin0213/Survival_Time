@@ -8,6 +8,7 @@ extends CharacterBody3D
 
 @onready var head: Node3D = $Head
 @onready var interaction_raycast: RayCast3D = $Head/InteractionRaycast
+@onready var equippable_item_holder: Node3D = $Head/EquippableItemHolder
 
 func _enter_tree() -> void:
 	EventSystem.PLA_freeze_player.connect(set_freeze.bind(true))
@@ -27,6 +28,10 @@ func _process(delta: float) -> void:
 
 func _physics_process(delta: float) -> void:
 	move()
+	
+	if Input.is_action_just_pressed("use_item"):
+		equippable_item_holder.try_to_use_item()
+
 
 func move() -> void:
 	var is_sprinting : bool
@@ -65,3 +70,6 @@ func _unhandled_key_input(event: InputEvent) -> void:
 	
 	elif event.is_action_pressed("open_crafting_menu"):
 		EventSystem.BUL_create_bulletin.emit(BulletinConfig.Keys.CraftingMenu)
+	
+	elif event.is_action_pressed("item_hotkey"):
+		EventSystem.EQU_hotkey_pressed.emit(int(event.as_text()))
