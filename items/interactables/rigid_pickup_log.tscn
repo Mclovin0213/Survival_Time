@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://c50x5xmniunds"]
+
+[ext_resource type="PackedScene" uid="uid://82nq7kj6laqu" path="res://items/interactables/rigid_pickup_template.tscn" id="1_n7coc"]
+[ext_resource type="PackedScene" uid="uid://db05uf1jcx3lt" path="res://meshes/log.tscn" id="2_0qqy0"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_hs6p5"]
+radius = 0.160144
+height = 1.13862
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_2ae53"]
+points = PackedVector3Array(0.00792501, -0.498707, 0.136395, -0.116518, -0.498315, 0.0655277, -0.0962673, -0.498413, -0.0487249, 0.096803, -0.498707, 0.0616771, 0.118041, -0.498707, 0.072807, 0.109454, 0.503553, 0.0536594, -0.000639059, 0.503553, 0.117221, -0.100767, 0.499923, 0.0639453, -0.116518, -0.498315, -0.0615955, -0.11374, 0.186864, 0.054477, -0.115049, 0.187551, -0.0707473, -0.0022233, -0.496058, -0.115214, 0.10787, -0.496058, -0.0516525, 0.109867, -0.17103, -0.0598548, 0.110372, 0.499923, -0.063178, 0.000279345, 0.499923, -0.12674, 0.000738539, 0.500315, -0.103082, -0.0805168, 0.500315, -0.051969, -0.100767, 0.499923, -0.063178, -0.00454225, 0.174993, -0.133043, 0.00443509, -0.17103, -0.120726)
+
+[node name="RigidPickupLog" instance=ExtResource("1_n7coc")]
+collision_layer = 16
+
+[node name="Pickup" parent="." index="0"]
+item_key = 5
+prompt = "Pickup Log"
+
+[node name="CollisionShape3D" parent="Pickup" index="0"]
+shape = SubResource("CapsuleShape3D_hs6p5")
+
+[node name="Log" parent="." index="1" instance=ExtResource("2_0qqy0")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="2"]
+shape = SubResource("ConvexPolygonShape3D_2ae53")

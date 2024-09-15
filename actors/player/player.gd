@@ -5,10 +5,11 @@ extends CharacterBody3D
 @export var jump_velocity := 4.0
 @export var gravity := 0.2
 @export var mouse_sensitivity := 0.005
+@export var walk_energy_change_per_1m := -0.05
 
 @onready var head: Node3D = $Head
 @onready var interaction_raycast: RayCast3D = $Head/InteractionRaycast
-@onready var equippable_item_holder: Node3D = $Head/EquippableItemHolder
+@onready var equippable_item_holder: Node3D = %EquippableItemHolder
 
 func _enter_tree() -> void:
 	EventSystem.PLA_freeze_player.connect(set_freeze.bind(true))
@@ -28,6 +29,7 @@ func _process(delta: float) -> void:
 
 func _physics_process(delta: float) -> void:
 	move()
+	check_walking_energy_change(delta)
 	
 	if Input.is_action_just_pressed("use_item"):
 		equippable_item_holder.try_to_use_item()
@@ -54,6 +56,14 @@ func move() -> void:
 	velocity.x = direction.x * speed
 	
 	move_and_slide()
+
+func check_walking_energy_change(delta : float) -> void:
+	if velocity.x or velocity.z:
+		EventSystem.PLA_change_energy.emit(
+			delta *
+			walk_energy_change_per_1m *
+			Vector2(velocity.z, velocity.x).length()
+		)
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
