@@ -15,6 +15,8 @@ signal PLA_freeze_player
 signal PLA_unfreeze_player
 signal PLA_change_energy
 signal PLA_energy_updated
+signal PLA_change_health
+signal PLA_health_updated
 
 signal EQU_hotkey_pressed
 signal EQU_equip_item
