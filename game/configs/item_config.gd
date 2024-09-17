@@ -61,6 +61,7 @@ static func get_crafting_blueprint(key : Keys) -> CraftingBlueprintResource:
 
 const EQUIPPABLE_ITEM_PATHS := {
 	Keys.Axe : "res://items/equippables/equippable_axe.tscn",
+	Keys.Mushroom : "res://items/equippables/equippable_mushroom.tscn"
 }
 
 static func get_equippable_item(key : Keys) -> PackedScene:
