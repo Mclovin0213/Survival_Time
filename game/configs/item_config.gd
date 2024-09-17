@@ -43,7 +43,9 @@ const ITEM_RESOURCE_PATHS := {
 	Keys.Plant: "res://resources/item_resources/plant_resource.tres",
 	Keys.Axe: "res://resources/item_resources/axe_resource.tres",
 	Keys.Rope: "res://resources/item_resources/rope_resource.tres",
-	Keys.Log: "res://resources/item_resources/log_resource.tres"
+	Keys.Log: "res://resources/item_resources/log_resource.tres",
+	Keys.Mushroom: "res://resources/item_resources/mushroom_resource.tres"
+
 }
 
 static func get_item_resource(key : Keys) -> ItemResource:
