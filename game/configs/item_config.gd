@@ -47,7 +47,8 @@ const ITEM_RESOURCE_PATHS := {
 	Keys.Log : "res://resources/item_resources/log_resource.tres",
 	Keys.Mushroom : "res://resources/item_resources/mushroom_resource.tres",
 	Keys.Coal : "res://resources/item_resources/coal_resource.tres",
-	Keys.Flint : "res://resources/item_resources/flint_resource.tres"
+	Keys.Flint : "res://resources/item_resources/flint_resource.tres",
+	Keys.RawMeat: "res://resources/item_resources/raw_meat_resource.tres",
 }
 
 static func get_item_resource(key : Keys) -> ItemResource:
@@ -74,7 +75,8 @@ static func get_equippable_item(key : Keys) -> PackedScene:
 const PICKUP_ITEM_PATHS := {
 	Keys.Log : "res://items/interactables/rigid_pickup_log.tscn",
 	Keys.Coal : "res://items/interactables/rigid_pickup_coal.tscn",
-	Keys.Flint : "res://items/interactables/rigid_pickup_flint.tscn"
+	Keys.Flint : "res://items/interactables/rigid_pickup_flint.tscn",
+	Keys.RawMeat : "res://items/interactables/rigid_pickup_raw_meat.tscn",
 }
 
 static func get_pickup_item(key : Keys) -> PackedScene:
