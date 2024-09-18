@@ -22,6 +22,9 @@ func _ready() -> void:
 	
 	# TODO: Delete later
 	hotbar[0] = ItemConfig.Keys.Axe
+	hotbar[1] = ItemConfig.Keys.Pickaxe
+	hotbar[2] = ItemConfig.Keys.Mushroom
+
 
 func send_inventory() -> void:
 	EventSystem.INV_inventory_updated.emit(inventory)

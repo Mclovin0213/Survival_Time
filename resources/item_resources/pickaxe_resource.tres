@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="WeaponItemResource" load_steps=3 format=3 uid="uid://cu6wnn4ov2hpf"]
+
+[ext_resource type="Texture2D" uid="uid://cticai0qomn7q" path="res://textures/item_icons/pickaxe.png" id="1_q5y46"]
+[ext_resource type="Script" path="res://resources/item_resources/weapon_item_resource.gd" id="2_ihb5f"]
+
+[resource]
+script = ExtResource("2_ihb5f")
+damage = 20.0
+range = 1.5
+energy_change_per_use = -0.5
+item_key = 11
+display_name = "Pickaxe"
+icon = ExtResource("1_q5y46")
+description = "A DIY pickaxe"
+is_equipable = true

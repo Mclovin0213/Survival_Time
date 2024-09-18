@@ -39,13 +39,15 @@ const CRAFTABLE_ITEM_KEYS : Array[Keys] = [
 
 const ITEM_RESOURCE_PATHS := {
 	Keys.Stick : "res://resources/item_resources/stick_resource.tres",
-	Keys.Stone: "res://resources/item_resources/stone_resource.tres",
-	Keys.Plant: "res://resources/item_resources/plant_resource.tres",
-	Keys.Axe: "res://resources/item_resources/axe_resource.tres",
-	Keys.Rope: "res://resources/item_resources/rope_resource.tres",
-	Keys.Log: "res://resources/item_resources/log_resource.tres",
-	Keys.Mushroom: "res://resources/item_resources/mushroom_resource.tres"
-
+	Keys.Stone : "res://resources/item_resources/stone_resource.tres",
+	Keys.Plant : "res://resources/item_resources/plant_resource.tres",
+	Keys.Axe : "res://resources/item_resources/axe_resource.tres",
+	Keys.Pickaxe : "res://resources/item_resources/pickaxe_resource.tres",
+	Keys.Rope : "res://resources/item_resources/rope_resource.tres",
+	Keys.Log : "res://resources/item_resources/log_resource.tres",
+	Keys.Mushroom : "res://resources/item_resources/mushroom_resource.tres",
+	Keys.Coal : "res://resources/item_resources/coal_resource.tres",
+	Keys.Flint : "res://resources/item_resources/flint_resource.tres"
 }
 
 static func get_item_resource(key : Keys) -> ItemResource:
@@ -53,7 +55,8 @@ static func get_item_resource(key : Keys) -> ItemResource:
 
 const CRAFTING_BLUEPRINT_RESOURCE_PATHS := {
 	Keys.Axe : "res://resources/crafting_blueprints/axe_blueprint.tres",
-	Keys.Rope : "res://resources/crafting_blueprints/rope_blueprint.tres"
+	Keys.Rope : "res://resources/crafting_blueprints/rope_blueprint.tres",
+	Keys.Pickaxe : "res://resources/crafting_blueprints/pickaxe_blueprint.tres",
 }
 
 static func get_crafting_blueprint(key : Keys) -> CraftingBlueprintResource:
@@ -61,14 +64,17 @@ static func get_crafting_blueprint(key : Keys) -> CraftingBlueprintResource:
 
 const EQUIPPABLE_ITEM_PATHS := {
 	Keys.Axe : "res://items/equippables/equippable_axe.tscn",
-	Keys.Mushroom : "res://items/equippables/equippable_mushroom.tscn"
+	Keys.Mushroom : "res://items/equippables/equippable_mushroom.tscn",
+	Keys.Pickaxe : "res://items/equippables/equippable_pickaxe.tscn",
 }
 
 static func get_equippable_item(key : Keys) -> PackedScene:
 	return load(EQUIPPABLE_ITEM_PATHS.get(key))
 
 const PICKUP_ITEM_PATHS := {
-	Keys.Log : "res://items/interactables/rigid_pickup_log.tscn"
+	Keys.Log : "res://items/interactables/rigid_pickup_log.tscn",
+	Keys.Coal : "res://items/interactables/rigid_pickup_coal.tscn",
+	Keys.Flint : "res://items/interactables/rigid_pickup_flint.tscn"
 }
 
 static func get_pickup_item(key : Keys) -> PackedScene:

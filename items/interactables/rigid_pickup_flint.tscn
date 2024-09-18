@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://dtahgdve31ilq"]
+
+[ext_resource type="PackedScene" uid="uid://82nq7kj6laqu" path="res://items/interactables/rigid_pickup_template.tscn" id="1_hm03u"]
+[ext_resource type="PackedScene" uid="uid://cf7lrbe5h5th6" path="res://meshes/flintstone.tscn" id="2_8rgii"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_c1c1c"]
+radius = 0.0962986
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_537an"]
+points = PackedVector3Array(0.00114315, -0.0789115, -0.0284172, -0.0788405, -0.0350172, -0.0560931, -0.0163276, -0.00916479, -0.100309, 0.0873287, -0.0324766, 0.00273275, 0.0375158, -0.0505013, 0.0918979, -0.0787911, -0.0579171, 0.0434168, -0.0807323, 0.0364976, -0.0216622, -0.041744, 0.0554149, -0.0888256, 0.0312151, 0.057801, -0.0709154, 0.0626361, 0.0625389, 0.0500945, -0.00489428, 0.0212711, 0.096858, 0.00234406, 0.0964595, 0.0089666)
+
+[node name="RigidPickupCoal" instance=ExtResource("1_hm03u")]
+collision_layer = 32
+collision_mask = 113
+
+[node name="Pickup" parent="." index="0"]
+item_key = 7
+prompt = "Pickup flint"
+
+[node name="CollisionShape3D" parent="Pickup" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00704068, 0, 0)
+shape = SubResource("SphereShape3D_c1c1c")
+
+[node name="Flintstone" parent="." index="1" instance=ExtResource("2_8rgii")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="2"]
+shape = SubResource("ConvexPolygonShape3D_537an")
