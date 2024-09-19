@@ -19,6 +19,11 @@ unique_name_in_owner = true
 one_shot = true
 autostart = true
 
+[node name="FleeTimer" type="Timer" parent="Timers"]
+unique_name_in_owner = true
+one_shot = true
+autostart = true
+
 [node name="WanderTimer" type="Timer" parent="Timers"]
 unique_name_in_owner = true
 one_shot = true
@@ -31,5 +36,6 @@ one_shot = true
 
 [connection signal="register_hit" from="Hitbox" to="." method="take_hit"]
 [connection signal="timeout" from="Timers/IdleTimer" to="." method="_on_idle_timer_timeout"]
+[connection signal="timeout" from="Timers/FleeTimer" to="." method="_on_flee_timer_timeout"]
 [connection signal="timeout" from="Timers/WanderTimer" to="." method="_on_wander_timer_timeout"]
 [connection signal="timeout" from="Timers/DeleteAfterDeathTimer" to="." method="_on_delete_after_death_timer_timeout"]
