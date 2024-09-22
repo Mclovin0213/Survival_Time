@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dfbky3htobdhq" path="res://items/equippables/equippable_template.tscn" id="1_e0n7v"]
 [ext_resource type="Script" path="res://items/equippables/equippable_weapon.gd" id="2_kdlja"]
 
-[node name="EquippableWeaponTemplate" instance=ExtResource("1_e0n7v")]
+[node name="EquippableWeapon" instance=ExtResource("1_e0n7v")]
 script = ExtResource("2_kdlja")
 
 [node name="HitCheckMarker" type="Marker3D" parent="." index="2"]

@@ -8,8 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://xbnpduikg3ns" path="res://game/managers/spawner.tscn" id="8_lfvaq"]
 [ext_resource type="PackedScene" uid="uid://camyxjbuyomt5" path="res://objects/hittable_objects/hittable_tree.tscn" id="8_ndl5q"]
 [ext_resource type="PackedScene" uid="uid://buh72deip6ywb" path="res://items/interactables/pickup_mushroom.tscn" id="8_xb4op"]
-[ext_resource type="PackedScene" uid="uid://cxb6ifqyahjqm" path="res://objects/hittable_objects/hittable_coal_rock.tscn" id="9_fqvfn"]
-[ext_resource type="PackedScene" uid="uid://b4fj1h04c041s" path="res://objects/hittable_objects/hittable_flint_rock.tscn" id="10_ssqhv"]
+[ext_resource type="PackedScene" path="res://objects/hittable_objects/hittable_coal_rock.tscn" id="9_fqvfn"]
+[ext_resource type="PackedScene" path="res://objects/hittable_objects/hittable_flint_rock.tscn" id="10_ssqhv"]
 [ext_resource type="PackedScene" uid="uid://c1e7qhrfiktre" path="res://actors/animals/cow.tscn" id="11_thd0w"]
 [ext_resource type="PackedScene" uid="uid://bhow663yjn4j2" path="res://actors/animals/wolf.tscn" id="12_gqjo1"]
 

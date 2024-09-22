@@ -24,6 +24,9 @@ func _ready() -> void:
 	hotbar[0] = ItemConfig.Keys.Axe
 	hotbar[1] = ItemConfig.Keys.Pickaxe
 	hotbar[2] = ItemConfig.Keys.Mushroom
+	hotbar[3] = ItemConfig.Keys.Tent
+	hotbar[4] = ItemConfig.Keys.Campfire
+
 
 
 func send_inventory() -> void:

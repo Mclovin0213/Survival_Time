@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://c2y5a00xwmsce"]
+[gd_scene load_steps=6 format=3 uid="uid://do3rs06yc185l"]
 
 [ext_resource type="PackedScene" uid="uid://4djh44n3uiuw" path="res://items/equippables/equippable_weapon.tscn" id="1_ihg1c"]
 [ext_resource type="PackedScene" uid="uid://tlp1yr3bdf30" path="res://meshes/pickaxe.tscn" id="3_t7ore"]
