@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="ConsumableItemResource" load_steps=3 format=3 uid="uid://dkjg2aulyfpa4"]
+[gd_resource type="Resource" script_class="ConsumableItemResource" load_steps=4 format=3 uid="uid://dkjg2aulyfpa4"]
 
+[ext_resource type="Resource" uid="uid://bj3plb2qlud5s" path="res://resources/cooking_recipes/meat_recipe.tres" id="1_aasqy"]
 [ext_resource type="Texture2D" uid="uid://dlrwv6lchbdpx" path="res://textures/item_icons/raw_meat.png" id="1_wjwv4"]
 [ext_resource type="Script" path="res://resources/item_resources/consumable_item_resource.gd" id="2_2la4r"]
 
@@ -12,3 +13,4 @@ display_name = "Raw Meat"
 icon = ExtResource("1_wjwv4")
 description = "Slimy raw meat."
 is_equipable = true
+cooking_recipe = ExtResource("1_aasqy")

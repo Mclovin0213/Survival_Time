@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://crkbxwboy4msb"]
 
-[ext_resource type="PackedScene" uid="uid://deys62ujdeura" path="res://items/interactables/pickup_template.tscn" id="1_deqh3"]
+[ext_resource type="PackedScene" uid="uid://deys62ujdeura" path="res://items/interactables/pickups/pickup_template.tscn" id="1_deqh3"]
 [ext_resource type="PackedScene" uid="uid://bd11df8yph2xt" path="res://meshes/stone.tscn" id="2_7lvyg"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rntdw"]

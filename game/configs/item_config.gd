@@ -78,10 +78,10 @@ static func get_equippable_item(key : Keys) -> PackedScene:
 	return load(EQUIPPABLE_ITEM_PATHS.get(key))
 
 const PICKUP_ITEM_PATHS := {
-	Keys.Log : "res://items/interactables/rigid_pickup_log.tscn",
-	Keys.Coal : "res://items/interactables/rigid_pickup_coal.tscn",
-	Keys.Flint : "res://items/interactables/rigid_pickup_flint.tscn",
-	Keys.RawMeat : "res://items/interactables/rigid_pickup_raw_meat.tscn",
+	Keys.Log : "res://items/interactables/pickups/rigid_pickup_log.tscn",
+	Keys.Coal : "res://items/interactables/pickups/rigid_pickup_coal.tscn",
+	Keys.Flint : "res://items/interactables/pickups/rigid_pickup_flint.tscn",
+	Keys.RawMeat : "res://items/interactables/pickups/rigid_pickup_raw_meat.tscn",
 }
 
 static func get_pickup_item(key : Keys) -> PackedScene:

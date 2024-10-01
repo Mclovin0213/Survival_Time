@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://d2dlfi8h2cakt"]
 
-[ext_resource type="PackedScene" uid="uid://82nq7kj6laqu" path="res://items/interactables/rigid_pickup_template.tscn" id="1_5kiad"]
+[ext_resource type="PackedScene" uid="uid://82nq7kj6laqu" path="res://items/interactables/pickups/rigid_pickup_template.tscn" id="1_5kiad"]
 [ext_resource type="PackedScene" uid="uid://dae27852rga32" path="res://meshes/coal.tscn" id="2_4jqnr"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_c1c1c"]

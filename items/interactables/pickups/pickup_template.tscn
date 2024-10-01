@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://deys62ujdeura"]
 
-[ext_resource type="Script" path="res://items/interactables/pickup.gd" id="1_rbk3d"]
+[ext_resource type="Script" path="res://items/interactables/pickups/pickup.gd" id="1_rbk3d"]
 
 [node name="PickupTemplate" type="Node3D"]
 
